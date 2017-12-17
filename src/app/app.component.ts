@@ -12,7 +12,8 @@ import {TodoDataService} from './todo-data.service';
 export class AppComponent {
   title = 'app';
 
-  newTodo: Todo = new Todo();
+  // No longer needed, now handled by TodoListHeaderComponent
+  // newTodo: Todo = new Todo();
   
     // Ask Angular DI system to inject the dependency
     // associated with the dependency injection token `TodoDataService`
@@ -20,10 +21,16 @@ export class AppComponent {
     constructor(private todoDataService: TodoDataService) {
     }
   
-     // Service is now available as this.todoDataService
-    addTodo() {
-      this.todoDataService.addTodo(this.newTodo);
-      this.newTodo = new Todo();
+    // Service is now available as this.todoDataService
+    // But method is no longer needed; it's now handled by TodoListHeaderComponent
+    // addTodo() {
+    //   this.todoDataService.addTodo(this.newTodo);
+    //   this.newTodo = new Todo();
+    // }
+
+    // Add new method to handle event emitted by TodoListHeaderComponent
+    onAddTodo(todo: Todo) {
+      this.todoDataService.addTodo(todo);
     }
   
     toggleTodoComplete(todo) {
