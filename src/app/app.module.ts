@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { TodoDataService } from './todo-data.service';
 import { TodoListHeaderComponent, TodoListComponent, TodoListItemComponent, TodoListFooterComponent } from './todo-ui';
+import { ApiService } from './api.service';
 
 
 
@@ -22,7 +23,7 @@ import { TodoListHeaderComponent, TodoListComponent, TodoListItemComponent, Todo
     FormsModule,
     HttpModule
   ],
-  providers: [TodoDataService],
+  providers: [TodoDataService, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
