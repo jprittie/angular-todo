@@ -5,10 +5,10 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { TodoDataService } from './todo-data.service';
-import { TodoListHeaderComponent, TodoListComponent, TodoListItemComponent, TodoListFooterComponent } from './todo-ui';
+import { TodoListHeaderComponent, TodoListComponent, TodoListItemComponent, TodoListFooterComponent,TodosComponent } from './todo-ui';
 import { ApiService } from './api.service';
 import { AppRoutingModule } from './app-routing.module';
-import { TodosComponent } from './todos/todos.component';
+
 
 
 
