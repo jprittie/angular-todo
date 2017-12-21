@@ -8,6 +8,7 @@ import { TodoDataService } from './todo-data.service';
 import { TodoListHeaderComponent, TodoListComponent, TodoListItemComponent, TodoListFooterComponent,TodosComponent } from './todo-ui';
 import { ApiService } from './api.service';
 import { AppRoutingModule } from './app-routing.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -19,7 +20,8 @@ import { AppRoutingModule } from './app-routing.module';
     TodoListComponent,
     TodoListItemComponent,
     TodoListFooterComponent,
-    TodosComponent
+    TodosComponent,
+    PageNotFoundComponent
   ],
   imports: [
     AppRoutingModule,
