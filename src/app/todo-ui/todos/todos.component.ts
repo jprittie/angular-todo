@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoDataService } from '../../todo-data.service';
 import { Todo } from '../../todo';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-todos',
@@ -18,13 +19,14 @@ export class TodosComponent implements OnInit {
   // associated with the dependency injection token `TodoDataService`
   // and assign it to a property called `TodoDataService`
   constructor(
-    private todoDataService: TodoDataService
+    private todoDataService: TodoDataService,
+    private route: ActivatedRoute
   ) {
   }
 
   public ngOnInit() {
-    this.todoDataService
-      .getAllTodos()
+    this.route.data
+      .map((data) => data['todos'])
       .subscribe(
         (todos) => {
           this.todos = todos;
